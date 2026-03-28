@@ -1,0 +1,6 @@
+[
+  { "name": "models/v2/classifier.onnx", "size": 257949696, "etag": "a1b2c3d4e5f6", "lastModified": "2024-12-01T14:30:00.000Z" },
+  { "name": "models/v2/tokenizer.json", "size": 1258291, "etag": "d4e5f6g7h8i9", "lastModified": "2024-12-01T14:31:00.000Z" },
+  { "name": "models/v2/config.yaml", "size": 4608, "etag": "g7h8i9j0k1l2", "lastModified": "2024-12-01T14:31:00.000Z" },
+  { "name": "models/v2/README.md", "size": 2150, "etag": "j0k1l2m3n4o5", "lastModified": "2024-12-01T14:32:00.000Z" }
+]

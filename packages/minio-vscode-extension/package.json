@@ -1,0 +1,127 @@
+{
+  "name": "minio-mcp-extension",
+  "displayName": "MinIO MCP",
+  "description": "VS Code extension that provides MinIO/S3 MCP server for AI assistants",
+  "version": "0.1.0",
+  "publisher": "bhayanak",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp server",
+    "ai",
+    "copilot",
+    "minio",
+    "s3",
+    "object-storage",
+    "bucket",
+    "cloud-storage",
+    "devops"
+  ],
+  "icon": "logo.png",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhayanak/minio-mcp-server"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "extensionDependencies": [],
+  "contributes": {
+    "configuration": {
+      "title": "MinIO MCP",
+      "properties": {
+        "minioMcp.endpoint": {
+          "type": "string",
+          "default": "",
+          "description": "MinIO server endpoint (e.g. play.min.io or localhost:9000)",
+          "order": 1
+        },
+        "minioMcp.accessKey": {
+          "type": "string",
+          "default": "",
+          "description": "MinIO access key (username)",
+          "order": 2
+        },
+        "minioMcp.secretKey": {
+          "type": "string",
+          "default": "",
+          "description": "MinIO secret key (password)",
+          "order": 3
+        },
+        "minioMcp.useSSL": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use SSL/TLS to connect to MinIO",
+          "order": 4
+        },
+        "minioMcp.region": {
+          "type": "string",
+          "default": "us-east-1",
+          "description": "Default region for bucket operations",
+          "order": 5
+        },
+        "minioMcp.sessionToken": {
+          "type": "string",
+          "default": "",
+          "description": "Optional STS session token for temporary credentials",
+          "order": 6
+        },
+        "minioMcp.allowedBuckets": {
+          "type": "string",
+          "default": "",
+          "description": "Comma-separated list of allowed bucket names (empty = all allowed)",
+          "order": 7
+        },
+        "minioMcp.maxUploadSize": {
+          "type": "number",
+          "default": 104857600,
+          "description": "Maximum upload size in bytes (default: 100 MB)",
+          "order": 8
+        },
+        "minioMcp.presignedExpiry": {
+          "type": "number",
+          "default": 3600,
+          "description": "Default presigned URL expiry in seconds",
+          "order": 9
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "minioMcp.showHealth",
+        "title": "MinIO MCP: Show Server Health"
+      }
+    ],
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "minio-mcp",
+        "label": "MinIO"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node build.cjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'No lint configured for extension'",
+    "lint:fix": "echo 'No lint configured for extension'",
+    "package": "npx @vscode/vsce package --no-dependencies --allow-missing-repository -o minio-mcp-extension-$(node -p \"require('./package.json').version\").vsix"
+  },
+  "dependencies": {
+    "minio-mcp-server": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/node": "^20.17.57",
+    "@vscode/vsce": "^3.4.2",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.8.3"
+  }
+}
