@@ -1,6 +1,11 @@
-# MinIO MCP
+<p align="center">
+  <img src="packages/minio-vscode-extension/logo.png" alt="# MinIO MCP Server" width="128" height="128" />
+</p>
+
+<h1 align="center">MinIO MCP Server</h1>
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) integration for [MinIO](https://min.io/) / S3-compatible object storage, providing AI assistants with direct access to bucket management, object CRUD, presigned URLs, policies, lifecycle rules, and storage analytics.
+
 
 ## Packages
 

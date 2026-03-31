@@ -1,4 +1,8 @@
-# MinIO MCP — VS Code Extension
+<p align="center">
+  <img src="logo.png" alt="# MinIO MCP Server" width="128" height="128" />
+</p>
+
+<h1 align="center">MinIO MCP Server— VS Code Extension</h1>
 
 VS Code extension that exposes MinIO / S3 tools to GitHub Copilot and other AI assistants via the [Language Model Tool API](https://code.visualstudio.com/api/extension-guides/language-model#tool-calling).
 

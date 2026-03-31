@@ -24,9 +24,7 @@ export function activate(context: vscode.ExtensionContext): void {
     },
   }
 
-  context.subscriptions.push(
-    vscode.lm.registerMcpServerDefinitionProvider('minio-mcp', provider),
-  )
+  context.subscriptions.push(vscode.lm.registerMcpServerDefinitionProvider('minio-mcp', provider))
 
   // Register health check command
   const healthCmd = vscode.commands.registerCommand('minioMcp.showHealth', async () => {

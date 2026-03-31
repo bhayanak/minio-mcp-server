@@ -1,4 +1,9 @@
-# minio-mcp-server
+<p align="center">
+  <img src="logo.png" alt="# MinIO MCP Server" width="128" height="128" />
+</p>
+
+<h1 align="center">minio-mcp-server</h1>
+
 
 Standalone [MCP](https://modelcontextprotocol.io/) server for MinIO / S3-compatible object storage. Communicates over stdio and works with any MCP client (Claude Desktop, Cursor, etc.).
 

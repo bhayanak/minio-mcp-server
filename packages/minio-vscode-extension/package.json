@@ -1,6 +1,6 @@
 {
   "name": "minio-mcp-extension",
-  "displayName": "MinIO MCP",
+  "displayName": "MinIO MCP Server",
   "description": "VS Code extension that provides MinIO/S3 MCP server for AI assistants",
   "version": "0.1.0",
   "publisher": "bhayanak",
